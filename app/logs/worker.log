@@ -1,0 +1,17 @@
+2026-02-06 17:05:12,945 - INFO - LIS Email Discovery Mode started.
+2026-02-06 17:05:12,945 - INFO - Connecting to outlook.office365.com for lease@prismpm.ca...
+2026-02-06 17:05:13,431 - ERROR - IMAP Authentication failed: b'LOGIN failed.'
+2026-02-06 17:05:55,467 - INFO - LIS Email Discovery Mode started.
+2026-02-06 17:05:55,467 - INFO - Connecting to outlook.office365.com for lease@prismpm.ca...
+2026-02-06 17:05:56,097 - ERROR - IMAP Authentication failed: b'LOGIN failed.'
+2026-02-06 17:05:56,098 - INFO - TROUBLESHOOTING TIPS:
+2026-02-06 17:05:56,098 - INFO - 1. Ensure you are using a 16-character 'App Password', NOT your standard login password.
+2026-02-06 17:05:56,098 - INFO - 2. Check if IMAP is enabled in Outlook Web: Settings > Mail > Sync email > Let devices use IMAP.
+2026-02-06 17:05:56,098 - INFO - 3. Ensure your .env file is saved and contains the correct EMAIL_PASS.
+2026-02-06 17:06:59,509 - INFO - LIS Email Discovery started.
+2026-02-06 17:06:59,510 - INFO - Attempting login for lease@prismpm.ca...
+2026-02-06 17:07:00,348 - ERROR - Login Rejected: b'LOGIN failed.'
+2026-02-06 17:12:00,349 - INFO - Attempting login for lease@prismpm.ca...
+2026-02-06 17:12:00,704 - ERROR - Login Rejected: b'LOGIN failed.'
+2026-02-06 17:17:00,707 - INFO - Attempting login for lease@prismpm.ca...
+2026-02-06 17:17:01,029 - ERROR - Login Rejected: b'LOGIN failed.'

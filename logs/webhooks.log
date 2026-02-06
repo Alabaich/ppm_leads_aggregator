@@ -1,0 +1,96 @@
+2026-02-06 20:28:13,042 - webhooks - INFO - --- RENTSYNC WEBHOOK RECEIVED ---
+2026-02-06 20:28:13,043 - webhooks - INFO - {
+  "auth": {
+    "key": null
+  },
+  "data": {
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "fullname": "Jane Doe",
+    "phone": "1231231234",
+    "source": "rentsync",
+    "parser": "rentsyncParser001",
+    "email": "jane@doe.com",
+    "inboundEmailId": 1234567,
+    "comment": "This is a test comment",
+    "sentAt": "Mon Jan 01 2021 10:10:00 GMT+0000 (Coordinated Universal Time)",
+    "adUrl": "https://www.testurl.com?id=1234",
+    "adIdentifier": "1234",
+    "clientKey": "rentsync-client",
+    "recipientEmail": "noreply@rentsync.com",
+    "buildingId": 12345,
+    "propertyName": "Jane Doe Property Rental",
+    "propertyEmail": "jd-Leads@jdproperties.com",
+    "propertyImportId": "57234",
+    "isPromoted": true,
+    "promotionType": "Test Promotion",
+    "moveInDate": "2024-01-01"
+  }
+}
+2026-02-06 20:28:13,165 - webhooks - INFO - Successfully saved lead: Jane Doe | Source: rentsync
+2026-02-06 20:44:27,188 - webhooks - INFO - --- RENTSYNC WEBHOOK RECEIVED ---
+2026-02-06 20:44:27,189 - webhooks - INFO - {
+  "auth": {
+    "key": null
+  },
+  "data": {
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "fullname": "Jane Doe",
+    "phone": "1231231234",
+    "source": "rentsync",
+    "parser": "rentsyncParser001",
+    "email": "jane@doe.com",
+    "inboundEmailId": 1234567,
+    "comment": "This is a test comment",
+    "sentAt": "Mon Jan 01 2021 10:10:00 GMT+0000 (Coordinated Universal Time)",
+    "adUrl": "https://www.testurl.com?id=1234",
+    "adIdentifier": "1234",
+    "clientKey": "rentsync-client",
+    "recipientEmail": "noreply@rentsync.com",
+    "buildingId": 12345,
+    "propertyName": "Jane Doe Property Rental",
+    "propertyEmail": "jd-Leads@jdproperties.com",
+    "propertyImportId": "57234",
+    "isPromoted": true,
+    "promotionType": "Test Promotion",
+    "moveInDate": "2024-01-01"
+  }
+}
+2026-02-06 20:44:27,205 - webhooks - ERROR - Critical Mapping Error: (psycopg2.errors.UndefinedColumn) column "move_in_date" of relation "leads" does not exist
+LINE 1: ..., inquiry_date, property_name, city, beds, baths, move_in_da...
+                                                             ^
+
+[SQL: INSERT INTO leads (created_at, prospect_name, email, phone, source, integration_source, inquiry_date, property_name, city, beds, baths, move_in_date, promotion, status, debug_1, debug_2) VALUES (%(created_at)s, %(prospect_name)s, %(email)s, %(phone)s, %(source)s, %(integration_source)s, %(inquiry_date)s, %(property_name)s, %(city)s, %(beds)s, %(baths)s, %(move_in_date)s, %(promotion)s, %(status)s, %(debug_1)s, %(debug_2)s) RETURNING leads.id]
+[parameters: {'created_at': datetime.datetime(2026, 2, 6, 20, 44, 27, 197932), 'prospect_name': 'Jane Doe', 'email': 'jane@doe.com', 'phone': '1231231234', 'source': 'RentSync', 'integration_source': 'rentsync', 'inquiry_date': None, 'property_name': 'Jane Doe Property Rental', 'city': None, 'beds': None, 'baths': None, 'move_in_date': '2024-01-01', 'promotion': 'Test Promotion', 'status': 'New', 'debug_1': '{"auth": {"key": null}, "data": {"firstName": "Jane", "lastName": "Doe", "fullname": "Jane Doe", "phone": "1231231234", "source": "rentsync", "parser ... (405 characters truncated) ... Email": "jd-Leads@jdproperties.com", "propertyImportId": "57234", "isPromoted": true, "promotionType": "Test Promotion", "moveInDate": "2024-01-01"}}', 'debug_2': 'SentAt Raw: Mon Jan 01 2021 10:10:00 GMT+0000 (Coordinated Universal Time)'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-02-06 20:47:21,720 - webhooks - INFO - --- RENTSYNC WEBHOOK RECEIVED ---
+2026-02-06 20:47:21,721 - webhooks - INFO - {
+  "auth": {
+    "key": null
+  },
+  "data": {
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "fullname": "Jane Doe",
+    "phone": "1231231234",
+    "source": "rentsync",
+    "parser": "rentsyncParser001",
+    "email": "jane@doe.com",
+    "inboundEmailId": 1234567,
+    "comment": "This is a test comment",
+    "sentAt": "Mon Jan 01 2021 10:10:00 GMT+0000 (Coordinated Universal Time)",
+    "adUrl": "https://www.testurl.com?id=1234",
+    "adIdentifier": "1234",
+    "clientKey": "rentsync-client",
+    "recipientEmail": "noreply@rentsync.com",
+    "buildingId": 12345,
+    "propertyName": "Jane Doe Property Rental",
+    "propertyEmail": "jd-Leads@jdproperties.com",
+    "propertyImportId": "57234",
+    "isPromoted": true,
+    "promotionType": "Test Promotion",
+    "moveInDate": "2024-01-01"
+  }
+}
+2026-02-06 20:47:21,739 - webhooks - INFO - Saved lead: Jane Doe | Promo: Test Promotion | Move-in: 2024-01-01
